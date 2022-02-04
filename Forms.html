@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario</title>
+    </head>
+    <style>
+        body {
+            font-family: sans-serif;
+            width: 1024px;
+            margin: 0px auto 0;
+            background-color: tomato;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            text-align: center;
+            color: white;
+        }
+
+        fieldset {
+            padding: 15px;
+            margin: 25px;
+            background: greenyellow;
+        }
+
+        legend {
+            font-size: 24px;
+            font-weight: bold;
+            background: honeydew;
+            padding: 5px;
+        }
+
+        #nome,
+        #email,
+        #rua {
+            margin-bottom: 15px;
+            width: 100%;
+            display: block;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        #num {
+            width: 20%;
+            padding: 10px;
+            margin-right: 27px;
+        }
+
+        #cidade,
+        #estado {
+            margin-top: 15px;
+        }
+
+        #bairro {
+            width: 60%;
+            padding: 10px;
+        }
+
+        #estado {
+            width: 25%;
+            padding: 10px;
+
+        }
+
+        #cidade {
+            width: 60%;
+            padding: 10px;
+
+        }
+
+        #born,
+        #telefone {
+
+            display: inline-block;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        #contrato,
+        #msg {
+            display: block;
+            width: 100%;
+            padding: 0;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        #enviar {
+            margin: 20px 0 30px 30px;
+            width: 100px;
+            color: rgb(77, 22, 104);
+            font-weight: bolder;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background-color: greenyellow;
+            padding: 10px;
+
+        }
+
+    </style>
+
+
+    <body>
+
+        <h1>Forms</h1>
+
+        <form action="#" method="post">
+            <fieldset class="dados-pessoais">
+                <Legend>Dados Pessoais</Legend>
+
+                <label for="nome">Nome completo</label>
+                <input type="text" name="nome" id="nome">
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required placeholder="Digite um e-mail válido">
+
+                <label for="born">Data de nascimento</label>
+                <input type="date" name="born" id="born" min="1980-01-01" max="2004-01-30">
+
+                <label for="ntelefone">Telefone</label>
+                <input type="tel" name="tel" id="telefone">
+
+                <p>Sexo</p>
+                <input type="radio" name="sexo" value="M">
+                <label for="Masculino">Masculino</label>
+
+                <input type="radio" name="sexo" value="F">
+                <label for="Feminino">Feminino</label>
+
+            </fieldset>
+            <fieldset>
+                <legend>Endereço</legend>
+
+                <label for="rua">Rua</label>
+                <input type="text" name="rua" id="rua">
+
+                <label for="num">Número</label>
+                <input type="text" name="num" id="num">
+
+                <label for="bairro">Bairro</label>
+                <input type="text" name="bairro" id="bairro">
+
+                <label for="cidade">Cidade</label>
+                <input type="text" name="cidade" id="cidade">
+
+                <label for="estado">Estado</label>
+                <select name="estado" id="estado">
+                    <option value="SP">Sao Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceara</option>
+                    <option value="PB">Paraiba</option>
+                    <option value="PR">Parana</option>
+                    <option value="AM">Amazonas</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Area de interesse</legend>
+
+                <label for="cursos">HTML</label>
+                <input type="checkbox" name="html" id="html">
+
+                <label for="cursos">CSS</label>
+                <input type="checkbox" name="css" id="css">
+
+                <label for="cursos">JS</label>
+                <input type="checkbox" name="javascript" id="js">
+            </fieldset>
+
+
+            <fieldset>
+                <legend>Contrato</legend>
+
+
+                <textarea style="resize: none;" name="mensagem" id="contrato" cols="30" rows="10"
+                    readonly>Mussum Ipsum, cacilds vidis litro abertis. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum.Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!Leite de capivaris, leite de mula manquis sem cabeça.Pra lá , depois divoltis porris, paradis. Mussum Ipsum, cacilds vidis litro abertis. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum.Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!Leite de capivaris, leite de mula manquis sem cabeça.Pra lá , depois divoltis porris, paradis.</textarea>
+
+
+                <label for="msg">Mensagem</label>
+                <textarea style="resize: none;" name="mensagem" id="msg" cols="30" rows="10"
+                    maxlength="180"> </textarea>
+                <input type="checkbox" checked>
+                <label for="aceito">Li e aceito os termos</label>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Anexar arquivo</legend>
+                <input type="file" name="arquivo" id="file">
+            </fieldset>
+
+            <input type="submit" name="enviar" id="enviar">
+        </form>
+
+
+
+
+
+
+    </body>
+
+</html>
